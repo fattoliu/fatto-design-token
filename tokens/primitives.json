@@ -1,0 +1,197 @@
+{
+  "$schema": "https://design-tokens.github.io/community-group/format/",
+  "color": {
+    "blue": {
+      "50": {
+        "$value": "#EFF5FF",
+        "$type": "color"
+      },
+      "500": {
+        "$value": "#326BFA",
+        "$type": "color"
+      },
+      "600": {
+        "$value": "#2458E8",
+        "$type": "color"
+      },
+      "700": {
+        "$value": "#1D46BB",
+        "$type": "color"
+      }
+    },
+    "neutral": {
+      "0": {
+        "$value": "#FFFFFF",
+        "$type": "color"
+      },
+      "50": {
+        "$value": "#F8FAFD",
+        "$type": "color"
+      },
+      "100": {
+        "$value": "#F1F4F9",
+        "$type": "color"
+      },
+      "200": {
+        "$value": "#E4EAF2",
+        "$type": "color"
+      },
+      "300": {
+        "$value": "#CED7E5",
+        "$type": "color"
+      },
+      "500": {
+        "$value": "#78869D",
+        "$type": "color"
+      },
+      "700": {
+        "$value": "#43516A",
+        "$type": "color"
+      },
+      "900": {
+        "$value": "#15233C",
+        "$type": "color"
+      },
+      "950": {
+        "$value": "#0D1728",
+        "$type": "color"
+      }
+    },
+    "green": {
+      "500": {
+        "$value": "#16A36A",
+        "$type": "color"
+      }
+    },
+    "amber": {
+      "500": {
+        "$value": "#E99016",
+        "$type": "color"
+      }
+    },
+    "red": {
+      "500": {
+        "$value": "#E34D59",
+        "$type": "color"
+      }
+    }
+  },
+  "space": {
+    "0": {
+      "$value": "0px",
+      "$type": "dimension"
+    },
+    "1": {
+      "$value": "4px",
+      "$type": "dimension"
+    },
+    "2": {
+      "$value": "8px",
+      "$type": "dimension"
+    },
+    "3": {
+      "$value": "12px",
+      "$type": "dimension"
+    },
+    "4": {
+      "$value": "16px",
+      "$type": "dimension"
+    },
+    "5": {
+      "$value": "20px",
+      "$type": "dimension"
+    },
+    "6": {
+      "$value": "24px",
+      "$type": "dimension"
+    },
+    "8": {
+      "$value": "32px",
+      "$type": "dimension"
+    },
+    "10": {
+      "$value": "40px",
+      "$type": "dimension"
+    },
+    "12": {
+      "$value": "48px",
+      "$type": "dimension"
+    }
+  },
+  "radius": {
+    "sm": {
+      "$value": "6px",
+      "$type": "dimension"
+    },
+    "md": {
+      "$value": "10px",
+      "$type": "dimension"
+    },
+    "lg": {
+      "$value": "14px",
+      "$type": "dimension"
+    },
+    "xl": {
+      "$value": "18px",
+      "$type": "dimension"
+    },
+    "pill": {
+      "$value": "999px",
+      "$type": "dimension"
+    }
+  },
+  "font": {
+    "family": {
+      "sans": {
+        "$value": "Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif",
+        "$type": "fontFamily"
+      }
+    },
+    "size": {
+      "xs": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "sm": {
+        "$value": "13px",
+        "$type": "dimension"
+      },
+      "base": {
+        "$value": "14px",
+        "$type": "dimension"
+      },
+      "lg": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "xl": {
+        "$value": "20px",
+        "$type": "dimension"
+      },
+      "title": {
+        "$value": "26px",
+        "$type": "dimension"
+      }
+    }
+  },
+  "motion": {
+    "duration": {
+      "fast": {
+        "$value": "120ms",
+        "$type": "duration"
+      },
+      "normal": {
+        "$value": "200ms",
+        "$type": "duration"
+      },
+      "slow": {
+        "$value": "320ms",
+        "$type": "duration"
+      },
+      "celebration": {
+        "$value": "1800ms",
+        "$type": "duration"
+      }
+    }
+  }
+}
