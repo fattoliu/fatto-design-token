@@ -1,46 +1,77 @@
 # Fatto Design Tokens
 
-> Calm by default. Delight with purpose.
+**Calm by default. Delight with purpose.**
 
-A design-token foundation for modern enterprise dashboards and AI-native developer platforms.
+A practical design-token foundation for modern enterprise dashboards and AI-native developer tools, inspired by our vehicle-management redesign.
 
-**Version:** 0.1.0 (foundation draft)
+**Current version: v0.2.0** · Node.js 20+ · Zero runtime dependencies · Light/Dark
 
-## Design principles
-1. Calm by default — quiet surfaces and restrained accent colors.
-2. Content first — hierarchy follows tasks and information.
-3. Progressive disclosure — reveal complexity when useful.
-4. Consistent but flexible — share tokens, adapt page patterns.
-5. Delight with purpose — celebrate genuine wins without obscuring outcomes.
+## Quick start
 
-## Structure
-- `tokens/primitives.json` — palette, spacing, typography, radii and motion.
-- `tokens/semantic.json` — light/dark role-based colors.
-- `tokens/components.json` — component dimensions and layout decisions.
-- `styles/tokens.css` — ready-to-use CSS custom properties.
-- `docs/` — principles and contribution guidelines.
+```bash
+git clone https://github.com/fattoliu/fatto-design-token.git
+cd fatto-design-token
+npm run validate  # check token values, theme parity and CSS naming
+npm run build     # regenerate styles/tokens.css
+npm test          # validate + ensure generated CSS is committed
+npm run preview   # open http://127.0.0.1:4173
+```
 
-## Vue usage
+The playground is at `preview/index.html`. It previews the semantic palette, controls, dashboard metrics, table, search and light/dark theme. Demo data is fictional.
+
+## Token architecture
+
+| Layer | File | Purpose |
+| --- | --- | --- |
+| Primitive | `tokens/primitives.json` | Color palette, spacing, radius, font, motion |
+| Semantic | `tokens/semantic.json` | Light/dark surface, text, border, action and status roles |
+| Component | `tokens/components.json` | Layout, buttons, inputs, cards, tables, dialogs and navigation |
+| Generated | `styles/tokens.css` | CSS custom properties for consumption |
+| Preview | `preview/index.html` | Interactive design reference |
+
+**The JSON files are the source of truth. Never hand-edit the generated CSS.**
+
+## Integrate into Vue
+
+Copy or import `styles/tokens.css` into your application entry:
+
 ```js
 import './styles/tokens.css'
 ```
 
 ```css
 .page { background: var(--ds-surface-canvas); color: var(--ds-text-primary); }
-.card { background: var(--ds-surface-base); border: 1px solid var(--ds-border-default); border-radius: var(--ds-radius-lg); }
-.primary-button { background: var(--ds-action-primary); color: #fff; }
+.card { background: var(--ds-surface-base); border: 1px solid var(--ds-border-default); border-radius: var(--ds-card-radius); }
+.primary-button { background: var(--ds-action-primary); color: var(--ds-text-inverse); }
 ```
 
-Set `data-theme="dark"` on the root HTML element to enable dark mode.
+Set `data-theme="dark"` on the document root to switch theme. Theme switching is opt-in, not tied to OS settings.
 
-**Note:** Token JSON is the intended source of truth; CSS is manually synchronized in v0.1.0. Automated builds and validation are planned.
+## Quality gates
+
+GitHub Actions runs `npm test` on pushes to `main` and pull requests. Checks cover:
+- primitive formats and CSS variable collisions;
+- semantic light/dark key parity;
+- generated CSS freshness.
+
+These are **structural checks**, not a full accessibility audit. Contrast, keyboard interaction, touch targets and visual regression still require dedicated testing.
+
+## Design principles
+
+1. **Calm by default:** quiet surfaces and intentional color.
+2. **Content first:** hierarchy follows tasks.
+3. **Progressive disclosure:** expose what matters now.
+4. **Consistent but flexible:** share tokens, adapt layouts.
+5. **Delight with purpose:** celebrate meaningful events, never obscure outcomes.
+
+See [design principles](docs/design-principles.md) and [contribution guide](docs/contributing.md).
 
 ## Roadmap
-- v0.2 — token build pipeline, validation and visual gallery
-- v0.3 — Vue 3 reference components and accessibility states
-- v0.4 — list, details, settings, AI agent and workflow page patterns
-- v1.0 — stable versioned releases and visual regression checks
 
-Inspired by a vehicle/driver management dashboard redesign. Not affiliated with Linear, Vercel or Anthropic.
+- [x] **v0.1** — primitive, semantic and component foundations
+- [x] **v0.2** — zero-dependency token build, validation, CI and interactive playground
+- [ ] **v0.3** — Vue 3 reference components, states and accessibility tests
+- [ ] **v0.4** — data-list, settings, AI Agent and workflow page patterns
+- [ ] **v1.0** — stable release, versioning and visual regression
 
-MIT License.
+MIT licensed. Independent project; not affiliated with Linear, Vercel or Anthropic.
