@@ -1,4 +1,5 @@
-/* v0.1.0 manually synchronized from tokens JSON */
+/* GENERATED FILE — npm run build. Do not edit directly. */
+
 :root, [data-theme="light"] {
   --ds-surface-canvas: #F8FAFD;
   --ds-surface-base: #FFFFFF;
@@ -22,6 +23,7 @@
   --ds-status-danger: #E34D59;
   --ds-status-danger-bg: #FFF0F1;
 }
+
 [data-theme="dark"] {
   --ds-surface-canvas: #0D1728;
   --ds-surface-base: #15233C;
@@ -45,15 +47,84 @@
   --ds-status-danger: #FF8C95;
   --ds-status-danger-bg: #4A2631;
 }
+
 :root {
-  --ds-space-1: 4px; --ds-space-2: 8px; --ds-space-3: 12px; --ds-space-4: 16px;
-  --ds-space-5: 20px; --ds-space-6: 24px; --ds-space-8: 32px;
-  --ds-radius-sm: 6px; --ds-radius-md: 10px; --ds-radius-lg: 14px; --ds-radius-xl: 18px;
-  --ds-sidebar-width: 248px; --ds-topbar-height: 60px; --ds-button-height: 36px;
-  --ds-input-height: 38px; --ds-table-row-height: 46px;
-  --ds-duration-fast: 120ms; --ds-duration-normal: 200ms; --ds-duration-slow: 320ms;
-  --ds-font-sans: Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --ds-color-blue-50: #EFF5FF;
+  --ds-color-blue-500: #326BFA;
+  --ds-color-blue-600: #2458E8;
+  --ds-color-blue-700: #1D46BB;
+  --ds-color-neutral-0: #FFFFFF;
+  --ds-color-neutral-50: #F8FAFD;
+  --ds-color-neutral-100: #F1F4F9;
+  --ds-color-neutral-200: #E4EAF2;
+  --ds-color-neutral-300: #CED7E5;
+  --ds-color-neutral-500: #78869D;
+  --ds-color-neutral-700: #43516A;
+  --ds-color-neutral-900: #15233C;
+  --ds-color-neutral-950: #0D1728;
+  --ds-color-green-500: #16A36A;
+  --ds-color-amber-500: #E99016;
+  --ds-color-red-500: #E34D59;
+  --ds-space-0: 0px;
+  --ds-space-1: 4px;
+  --ds-space-2: 8px;
+  --ds-space-3: 12px;
+  --ds-space-4: 16px;
+  --ds-space-5: 20px;
+  --ds-space-6: 24px;
+  --ds-space-8: 32px;
+  --ds-space-10: 40px;
+  --ds-space-12: 48px;
+  --ds-radius-sm: 6px;
+  --ds-radius-md: 10px;
+  --ds-radius-lg: 14px;
+  --ds-radius-xl: 18px;
+  --ds-radius-pill: 999px;
+  --ds-font-family-sans: Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --ds-font-size-xs: 12px;
+  --ds-font-size-sm: 13px;
+  --ds-font-size-base: 14px;
+  --ds-font-size-lg: 16px;
+  --ds-font-size-xl: 20px;
+  --ds-font-size-title: 26px;
+  --ds-motion-duration-fast: 120ms;
+  --ds-motion-duration-normal: 200ms;
+  --ds-motion-duration-slow: 320ms;
+  --ds-motion-duration-celebration: 1800ms;
+  --ds-layout-sidebar-width: 248px;
+  --ds-layout-topbar-height: 60px;
+  --ds-layout-content-max-width: 1600px;
+  --ds-layout-page-padding: 32px;
+  --ds-layout-section-gap: 20px;
+  --ds-button-height-sm: 30px;
+  --ds-button-height-md: 36px;
+  --ds-button-height-lg: 42px;
+  --ds-button-radius: 10px;
+  --ds-button-font-size: 13px;
+  --ds-input-height: 38px;
+  --ds-input-radius: 10px;
+  --ds-input-font-size: 13px;
+  --ds-card-radius: 14px;
+  --ds-card-padding: 20px;
+  --ds-card-border-width: 1px;
+  --ds-table-header-height: 42px;
+  --ds-table-row-height: 46px;
+  --ds-table-cell-padding-x: 12px;
+  --ds-table-row-hover: var(--ds-surface-subtle);
+  --ds-dialog-radius: 18px;
+  --ds-dialog-width-sm: 420px;
+  --ds-dialog-width-md: 560px;
+  --ds-dialog-padding: 24px;
+  --ds-navigation-item-height: 40px;
+  --ds-navigation-item-radius: 10px;
+  --ds-navigation-group-gap: 16px;
+  --ds-shadow: 0 2px 12px rgba(21,35,60,.04);
+  --ds-shadow: 0 16px 48px rgba(21,35,60,.16);
 }
+
 @media (prefers-reduced-motion: reduce) {
-  :root { --ds-duration-fast: 0ms; --ds-duration-normal: 0ms; --ds-duration-slow: 0ms; }
+
+  :root { --ds-motion-duration-fast: 0ms; --ds-motion-duration-normal: 0ms; --ds-motion-duration-slow: 0ms; --ds-motion-duration-celebration: 0ms; }
+
 }
+
