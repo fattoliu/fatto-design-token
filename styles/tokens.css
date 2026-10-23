@@ -1,0 +1,59 @@
+/* v0.1.0 manually synchronized from tokens JSON */
+:root, [data-theme="light"] {
+  --ds-surface-canvas: #F8FAFD;
+  --ds-surface-base: #FFFFFF;
+  --ds-surface-subtle: #F1F4F9;
+  --ds-surface-raised: #FFFFFF;
+  --ds-text-primary: #15233C;
+  --ds-text-secondary: #43516A;
+  --ds-text-muted: #78869D;
+  --ds-text-inverse: #FFFFFF;
+  --ds-border-default: #E4EAF2;
+  --ds-border-strong: #CED7E5;
+  --ds-border-focus: #326BFA;
+  --ds-action-primary: #326BFA;
+  --ds-action-primary-hover: #2458E8;
+  --ds-action-primary-active: #1D46BB;
+  --ds-action-primary-subtle: #EFF5FF;
+  --ds-status-success: #16A36A;
+  --ds-status-success-bg: #EAF9F1;
+  --ds-status-warning: #E99016;
+  --ds-status-warning-bg: #FFF6E9;
+  --ds-status-danger: #E34D59;
+  --ds-status-danger-bg: #FFF0F1;
+}
+[data-theme="dark"] {
+  --ds-surface-canvas: #0D1728;
+  --ds-surface-base: #15233C;
+  --ds-surface-subtle: #1C2B44;
+  --ds-surface-raised: #20304B;
+  --ds-text-primary: #F8FAFD;
+  --ds-text-secondary: #CED7E5;
+  --ds-text-muted: #9AABC2;
+  --ds-text-inverse: #0D1728;
+  --ds-border-default: #30425E;
+  --ds-border-strong: #4B607E;
+  --ds-border-focus: #7FA4FF;
+  --ds-action-primary: #7FA4FF;
+  --ds-action-primary-hover: #A4BFFF;
+  --ds-action-primary-active: #C7D7FF;
+  --ds-action-primary-subtle: #203A6B;
+  --ds-status-success: #53D7A1;
+  --ds-status-success-bg: #153E34;
+  --ds-status-warning: #FFC36B;
+  --ds-status-warning-bg: #49341D;
+  --ds-status-danger: #FF8C95;
+  --ds-status-danger-bg: #4A2631;
+}
+:root {
+  --ds-space-1: 4px; --ds-space-2: 8px; --ds-space-3: 12px; --ds-space-4: 16px;
+  --ds-space-5: 20px; --ds-space-6: 24px; --ds-space-8: 32px;
+  --ds-radius-sm: 6px; --ds-radius-md: 10px; --ds-radius-lg: 14px; --ds-radius-xl: 18px;
+  --ds-sidebar-width: 248px; --ds-topbar-height: 60px; --ds-button-height: 36px;
+  --ds-input-height: 38px; --ds-table-row-height: 46px;
+  --ds-duration-fast: 120ms; --ds-duration-normal: 200ms; --ds-duration-slow: 320ms;
+  --ds-font-sans: Inter, -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --ds-duration-fast: 0ms; --ds-duration-normal: 0ms; --ds-duration-slow: 0ms; }
+}
