@@ -1,0 +1,47 @@
+{
+  "layout": {
+    "sidebarWidth": "248px",
+    "topbarHeight": "60px",
+    "contentMaxWidth": "1600px",
+    "pagePadding": "32px",
+    "sectionGap": "20px"
+  },
+  "button": {
+    "heightSm": "30px",
+    "heightMd": "36px",
+    "heightLg": "42px",
+    "radius": "10px",
+    "fontSize": "13px"
+  },
+  "input": {
+    "height": "38px",
+    "radius": "10px",
+    "fontSize": "13px"
+  },
+  "card": {
+    "radius": "14px",
+    "padding": "20px",
+    "borderWidth": "1px"
+  },
+  "table": {
+    "headerHeight": "42px",
+    "rowHeight": "46px",
+    "cellPaddingX": "12px",
+    "rowHover": "surface.subtle"
+  },
+  "dialog": {
+    "radius": "18px",
+    "widthSm": "420px",
+    "widthMd": "560px",
+    "padding": "24px"
+  },
+  "navigation": {
+    "itemHeight": "40px",
+    "itemRadius": "10px",
+    "groupGap": "16px"
+  },
+  "shadow": {
+    "card": "0 2px 12px rgba(21,35,60,.04)",
+    "floating": "0 16px 48px rgba(21,35,60,.16)"
+  }
+}
