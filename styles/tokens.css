@@ -118,8 +118,8 @@
   --ds-navigation-item-height: 40px;
   --ds-navigation-item-radius: 10px;
   --ds-navigation-group-gap: 16px;
-  --ds-shadow: 0 2px 12px rgba(21,35,60,.04);
-  --ds-shadow: 0 16px 48px rgba(21,35,60,.16);
+  --ds-shadow-card: 0 2px 12px rgba(21,35,60,.04);
+  --ds-shadow-floating: 0 16px 48px rgba(21,35,60,.16);
 }
 
 @media (prefers-reduced-motion: reduce) {
