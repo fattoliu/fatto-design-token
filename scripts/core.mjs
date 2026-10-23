@@ -11,7 +11,7 @@ export const flatten = (obj, prefix = []) => Object.entries(obj).flatMap(([key, 
     : [{ path: [...prefix, key], value: value && typeof value === 'object' && '$value' in value ? value.$value : value }]
 );
 export const cssName = (path) => '--ds-' + path.map(kebab).join('-');
-export const declaration = (entry) => `  ${cssName(entry.path)}: ${entry.value};`;
+export const declaration = (entry) => `  ${cssName(entry.path)}: ${entry.value === 'surface.subtle' ? 'var(--ds-surface-subtle)' : entry.value};`;
 export async function loadTokens() {
   const [primitives, semantic, components] = await Promise.all([
     readJson('tokens/primitives.json'), readJson('tokens/semantic.json'), readJson('tokens/components.json')
