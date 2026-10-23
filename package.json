@@ -1,0 +1,16 @@
+{
+  "name": "@fatto/design-token",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Design tokens for calm, AI-native enterprise products",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/build.mjs --check",
+    "validate": "node scripts/validate.mjs",
+    "test": "npm run validate && npm run check",
+    "preview": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}
