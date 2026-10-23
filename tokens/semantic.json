@@ -1,0 +1,68 @@
+{
+  "light": {
+    "surface": {
+      "canvas": "#F8FAFD",
+      "base": "#FFFFFF",
+      "subtle": "#F1F4F9",
+      "raised": "#FFFFFF"
+    },
+    "text": {
+      "primary": "#15233C",
+      "secondary": "#43516A",
+      "muted": "#78869D",
+      "inverse": "#FFFFFF"
+    },
+    "border": {
+      "default": "#E4EAF2",
+      "strong": "#CED7E5",
+      "focus": "#326BFA"
+    },
+    "action": {
+      "primary": "#326BFA",
+      "primaryHover": "#2458E8",
+      "primaryActive": "#1D46BB",
+      "primarySubtle": "#EFF5FF"
+    },
+    "status": {
+      "success": "#16A36A",
+      "successBg": "#EAF9F1",
+      "warning": "#E99016",
+      "warningBg": "#FFF6E9",
+      "danger": "#E34D59",
+      "dangerBg": "#FFF0F1"
+    }
+  },
+  "dark": {
+    "surface": {
+      "canvas": "#0D1728",
+      "base": "#15233C",
+      "subtle": "#1C2B44",
+      "raised": "#20304B"
+    },
+    "text": {
+      "primary": "#F8FAFD",
+      "secondary": "#CED7E5",
+      "muted": "#9AABC2",
+      "inverse": "#0D1728"
+    },
+    "border": {
+      "default": "#30425E",
+      "strong": "#4B607E",
+      "focus": "#7FA4FF"
+    },
+    "action": {
+      "primary": "#7FA4FF",
+      "primaryHover": "#A4BFFF",
+      "primaryActive": "#C7D7FF",
+      "primarySubtle": "#203A6B"
+    },
+    "status": {
+      "success": "#53D7A1",
+      "successBg": "#153E34",
+      "warning": "#FFC36B",
+      "warningBg": "#49341D",
+      "danger": "#FF8C95",
+      "dangerBg": "#4A2631"
+    }
+  }
+}
