@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fatto Design Tokens · Playground</title>
+<link rel="stylesheet" href="../styles/tokens.css">
+<style>
+*{box-sizing:border-box}body{margin:0;font:14px/1.55 var(--ds-font-family-sans);background:var(--ds-surface-canvas);color:var(--ds-text-primary);transition:background .2s,color .2s}
+button,input,select{font:inherit}button{cursor:pointer}.shell{display:grid;grid-template-columns:var(--ds-layout-sidebar-width) minmax(0,1fr);min-height:100vh}
+aside{background:var(--ds-surface-base);border-right:1px solid var(--ds-border-default);padding:28px 16px}
+.brand{display:flex;gap:12px;align-items:center;font-weight:750;font-size:17px;padding:0 12px 30px}.logo{display:grid;place-items:center;background:var(--ds-action-primary);color:var(--ds-text-inverse);width:32px;height:32px;border-radius:10px;font-weight:800}
+.nav-title{padding:16px 12px 8px;color:var(--ds-text-muted);font-size:11px;letter-spacing:.1em;text-transform:uppercase}
+.nav{display:block;border-radius:var(--ds-navigation-item-radius);padding:10px 12px;margin:3px 0;color:var(--ds-text-secondary);text-decoration:none}
+.nav.active{background:var(--ds-action-primary-subtle);color:var(--ds-action-primary);font-weight:650}
+main{min-width:0}.topbar{height:var(--ds-layout-topbar-height);border-bottom:1px solid var(--ds-border-default);background:var(--ds-surface-base);display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+.content{max-width:var(--ds-layout-content-max-width);margin:auto;padding:32px}.eyebrow{font-size:12px;color:var(--ds-text-muted);font-weight:600;letter-spacing:.06em}
+h1{font-size:28px;letter-spacing:-.03em;margin:5px 0}h2{font-size:16px;margin:0 0 16px}.sub{color:var(--ds-text-secondary);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.card{background:var(--ds-surface-base);border:1px solid var(--ds-border-default);border-radius:var(--ds-card-radius);padding:var(--ds-card-padding);box-shadow:var(--ds-shadow-card)}
+.metric{font-size:28px;font-weight:700;letter-spacing:-.03em}.muted{color:var(--ds-text-muted);font-size:12px}.section{margin-top:24px}
+.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+.field{background:var(--ds-surface-base);color:var(--ds-text-primary);border:1px solid var(--ds-border-default);border-radius:var(--ds-input-radius);height:var(--ds-input-height);padding:0 12px;min-width:180px}
+.field:focus-visible,.btn:focus-visible,.nav:focus-visible{outline:2px solid var(--ds-border-focus);outline-offset:2px}
+.btn{border:1px solid var(--ds-border-default);border-radius:var(--ds-button-radius);background:var(--ds-surface-base);color:var(--ds-text-primary);height:var(--ds-button-height-md);padding:0 16px}
+.btn.primary{background:var(--ds-action-primary);color:var(--ds-text-inverse);border-color:transparent}.btn.primary:hover{background:var(--ds-action-primary-hover)}
+.btn.danger{color:var(--ds-status-danger);background:var(--ds-status-danger-bg);border-color:transparent}
+.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;text-align:left;white-space:nowrap}th{height:var(--ds-table-header-height);background:var(--ds-surface-subtle);font-weight:600;color:var(--ds-text-secondary);font-size:12px}
+td{height:var(--ds-table-row-height);border-bottom:1px solid var(--ds-border-default)}td,th{padding:0 var(--ds-table-cell-padding-x)}tbody tr:hover{background:var(--ds-surface-subtle)}
+.pill{display:inline-block;padding:3px 9px;border-radius:999px;background:var(--ds-status-success-bg);color:var(--ds-status-success);font-size:12px}.pill.warn{background:var(--ds-status-warning-bg);color:var(--ds-status-warning)}
+.swatches{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}.swatch{height:64px;border-radius:10px;border:1px solid var(--ds-border-default)}.token-name{font-size:12px;margin-top:6px;color:var(--ds-text-secondary);overflow-wrap:anywhere}
+.controls{display:flex;gap:8px;align-items:center}.theme-btn{min-width:96px}.empty{padding:24px;text-align:center;color:var(--ds-text-muted)}
+@media(max-width:1100px){.grid{grid-template-columns:repeat(2,1fr)}.swatches{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:760px){.shell{display:block}aside{display:none}.topbar{padding:0 16px}.content{padding:20px 16px}.grid{grid-template-columns:1fr 1fr}.swatches{grid-template-columns:repeat(2,1fr)}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside><div class="brand"><div class="logo">F</div>Fatto Design</div><div class="nav-title">Foundation</div><a class="nav active" href="#overview">Overview</a><a class="nav" href="#colors">Colors & Tokens</a><a class="nav" href="#components">Components</a><div class="nav-title">Patterns</div><a class="nav" href="#drivers">Data Table</a></aside>
+<main><header class="topbar"><span class="muted">Design System / Playground / v0.2.0</span><div class="controls"><button id="theme" class="btn theme-btn" type="button" aria-label="切换深浅主题">☾ Dark</button></div></header>
+<div class="content" id="overview"><div class="eyebrow">DESIGN FOUNDATION</div><h1>让复杂系统，保持清晰。</h1><p class="sub">Calm by default. Delight with purpose. 这是一套为现代企业后台与 AI 研发平台设计的 Token 体系。</p>
+<div class="grid">
+<div class="card"><div class="muted">成员总数</div><div class="metric">268</div><div class="muted">↑ 12% 较上月</div></div>
+<div class="card"><div class="muted">活跃项目</div><div class="metric">24</div><div class="muted">进行中的研发项目</div></div>
+<div class="card"><div class="muted">AI 工作流</div><div class="metric">86</div><div class="muted">可复用的执行流程</div></div>
+<div class="card"><div class="muted">本周完成任务</div><div class="metric">1,284</div><div class="muted">稳定交付中</div></div>
+</div>
+<section id="colors" class="card section"><h2>Semantic Colors</h2><div id="swatches" class="swatches"></div></section>
+<section id="components" class="card section"><h2>Buttons & Inputs</h2><div class="toolbar"><button class="btn primary">+ 新增成员</button><button class="btn">导出数据</button><button class="btn danger">批量删除</button><input class="field" aria-label="搜索示例" placeholder="搜索姓名、手机号…"><select class="field" aria-label="状态筛选"><option>全部状态</option><option>在职</option><option>即将到期</option></select></div><div class="muted">键盘 Tab 可检查焦点状态；切换主题可检查语义色表现。</div></section>
+<section id="drivers" class="card section"><h2>Driver Management · Table Pattern</h2><div class="toolbar"><input id="search" class="field" aria-label="筛选司机" placeholder="搜索司机或公司…"><select id="status" class="field" aria-label="筛选司机状态"><option value="">全部状态</option><option value="在职">在职</option><option value="即将到期">即将到期</option></select></div><div class="table-wrap"><table><thead><tr><th>所属公司</th><th>司机姓名</th><th>驾驶证</th><th>有效期</th><th>状态</th><th>操作</th></tr></thead><tbody id="rows"></tbody></table></div><div id="count" class="muted" style="padding-top:14px"></div></section>
+</div></main></div>
+<script type="module">
+const data=[['上海一队','司机2','A1','2027-04-15','在职'],['北京一队','测试司机','C1','2026-10-22','即将到期'],['杭州公司','张三','B2','2028-06-30','在职'],['深圳公司','李四','A2','2027-11-10','在职']];
+const rows=document.querySelector('#rows'), search=document.querySelector('#search'),status=document.querySelector('#status');
+function render(){const items=data.filter(x=>(x[0]+x[1]).toLowerCase().includes(search.value.trim().toLowerCase())&&(!status.value||x[4]===status.value));rows.replaceChildren();for(const item of items){const tr=document.createElement('tr');for(const value of item){const td=document.createElement('td');if(value===item[4]){const pill=document.createElement('span');pill.className='pill'+(value==='即将到期'?' warn':'');pill.textContent=value;td.append(pill)}else td.textContent=value;tr.append(td)}const td=document.createElement('td'),button=document.createElement('button');button.className='btn';button.textContent='查看';button.addEventListener('click',()=>alert(item[1]+' · '+item[0]));td.append(button);tr.append(td);rows.append(tr)}if(!items.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=6;td.className='empty';td.textContent='没有符合条件的司机';tr.append(td);rows.append(tr)}document.querySelector('#count').textContent='共 '+items.length+' 条'}
+search.addEventListener('input',render);status.addEventListener('change',render);render();
+const toggle=document.querySelector('#theme');toggle.addEventListener('click',()=>{const dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';toggle.textContent=dark?'☀ Light':'☾ Dark'});
+const names=['surface.canvas','surface.base','surface.subtle','text.primary','text.secondary','action.primary','action.primaryHover','status.success','status.warning','status.danger'];
+const wrap=document.querySelector('#swatches');for(const name of names){const token='--ds-'+name.replace(/\./g,'-').replace(/([a-z])([A-Z])/g,'$1-$2').toLowerCase();const item=document.createElement('div');const box=document.createElement('div');box.className='swatch';box.style.background='var('+token+')';const label=document.createElement('div');label.className='token-name';label.textContent=token;item.append(box,label);wrap.append(item)}
+</script>
+</body></html>
