@@ -23,7 +23,7 @@ export function buildCss({ primitives, semantic, components }) {
     ...flatten(primitives).filter(x => !x.path.includes('$schema')),
     ...flatten(components).filter(x => !x.path.includes('shadow'))
   ];
-  const shadows = flatten(components.shadow).map(x => ({ ...x, path: ['shadow', ...x.path.slice(1)] }));
+  const shadows = flatten(components.shadow).map(x => ({ ...x, path: ['shadow', ...x.path] }));
   const theme = (name, selector) =>
     `${selector} {\n${flatten(semantic[name]).map(declaration).join('\n')}\n}`;
   return [
